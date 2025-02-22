@@ -1,6 +1,7 @@
 package me.downn_falls.guiapi.component;
 
-import de.tr7zw.nbtapi.NBTItem;
+import de.tr7zw.changeme.nbtapi.NBTItem;
+import me.downn_falls.deathInventory.DeathInventory;
 import me.downn_falls.guiapi.*;
 import me.downn_falls.guiapi.api.Clickable;
 import me.downn_falls.guiapi.api.InputResult;
@@ -97,7 +98,7 @@ public class GuiListTextInput extends GuiButton implements Clickable {
     public void onInput(AsyncPlayerChatEvent event) {
         InputResult result = whenInput.apply(event);
 
-        Bukkit.getScheduler().runTask(GUIAPI.getInstance(), ()-> {
+        Bukkit.getScheduler().runTask(DeathInventory.getInstance(), ()-> {
             if (result.equals(InputResult.ERROR)) {
                 event.getPlayer().sendMessage(invalidInputMessage);
             } else {
