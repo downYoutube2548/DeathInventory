@@ -1,7 +1,7 @@
-package me.downn_falls.component;
+package me.downn_falls.guiapi.component;
 
-import me.downn_falls.GUI;
-import me.downn_falls.GuiRenderer;
+import me.downn_falls.guiapi.GUI;
+import me.downn_falls.guiapi.GuiRenderer;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 

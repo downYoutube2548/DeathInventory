@@ -1,11 +1,11 @@
-package me.downn_falls.component;
+package me.downn_falls.guiapi.component;
 
 import de.tr7zw.nbtapi.NBTItem;
-import me.downn_falls.GUI;
-import me.downn_falls.GuiRenderer;
-import me.downn_falls.ItemStackBuilder;
-import me.downn_falls.api.Clickable;
-import me.downn_falls.utils.Utils;
+import me.downn_falls.guiapi.GUI;
+import me.downn_falls.guiapi.GuiRenderer;
+import me.downn_falls.guiapi.ItemStackBuilder;
+import me.downn_falls.guiapi.api.Clickable;
+import me.downn_falls.guiapi.utils.GuiUtils;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
 
@@ -17,8 +17,8 @@ public class GuiOptionButton extends GuiButton implements Clickable {
 
     private int selectedOption = 0;
     private final LinkedHashMap<String, String> options = new LinkedHashMap<>();
-    private String optionFormat = Utils.colorize("&7 • {option}");
-    private String selectedOptionFormat = Utils.colorize("&f  ► {option}");
+    private String optionFormat = GuiUtils.colorize("&7 • {option}");
+    private String selectedOptionFormat = GuiUtils.colorize("&f  ► {option}");
 
     public GuiOptionButton(GUI gui, String id, int slot) {
         super(gui, id, slot);
@@ -30,17 +30,17 @@ public class GuiOptionButton extends GuiButton implements Clickable {
     }
 
     public GuiOptionButton addOption(String value, String display) {
-        options.put(value, Utils.colorize(display));
+        options.put(value, GuiUtils.colorize(display));
         return this;
     }
 
     public GuiOptionButton setOptionFormat(String s) {
-        this.optionFormat = Utils.colorize(s);
+        this.optionFormat = GuiUtils.colorize(s);
         return this;
     }
 
     public GuiOptionButton setSelectedOptionFormat(String s) {
-        this.selectedOptionFormat = Utils.colorize(s);
+        this.selectedOptionFormat = GuiUtils.colorize(s);
         return this;
     }
 

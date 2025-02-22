@@ -1,10 +1,10 @@
-package me.downn_falls.component;
+package me.downn_falls.guiapi.component;
 
 import de.tr7zw.nbtapi.NBTItem;
-import me.downn_falls.GUI;
-import me.downn_falls.GuiRenderer;
-import me.downn_falls.GuiUtils;
-import me.downn_falls.ItemStackBuilder;
+import me.downn_falls.guiapi.GUI;
+import me.downn_falls.guiapi.GuiRenderer;
+import me.downn_falls.guiapi.GuiUtils;
+import me.downn_falls.guiapi.ItemStackBuilder;
 import org.bukkit.Material;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;

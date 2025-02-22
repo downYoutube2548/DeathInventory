@@ -1,10 +1,10 @@
-package me.downn_falls.component;
+package me.downn_falls.guiapi.component;
 
 import de.tr7zw.nbtapi.NBTItem;
-import me.downn_falls.GUI;
-import me.downn_falls.GuiRenderer;
-import me.downn_falls.ItemStackBuilder;
-import me.downn_falls.utils.Utils;
+import me.downn_falls.guiapi.GUI;
+import me.downn_falls.guiapi.GuiRenderer;
+import me.downn_falls.guiapi.ItemStackBuilder;
+import me.downn_falls.guiapi.utils.GuiUtils;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
 
@@ -12,8 +12,8 @@ public class GuiCheckButton extends GuiButton {
 
     private boolean check = false;
 
-    private String enableFormat = Utils.colorize("&aTrue");
-    private String disableFormat = Utils.colorize("&cFalse");
+    private String enableFormat = GuiUtils.colorize("&aTrue");
+    private String disableFormat = GuiUtils.colorize("&cFalse");
 
     public GuiCheckButton(GUI gui, String id, int slot) {
         super(gui, id, slot);
@@ -23,11 +23,11 @@ public class GuiCheckButton extends GuiButton {
     public void setCheck(boolean b) { this.check = b; }
 
     public void setEnableFormat(String s) {
-        this.enableFormat = Utils.colorize(s);
+        this.enableFormat = GuiUtils.colorize(s);
     }
 
     public void setDisableFormat(String s) {
-        this.disableFormat = Utils.colorize(s);
+        this.disableFormat = GuiUtils.colorize(s);
     }
 
     @Override

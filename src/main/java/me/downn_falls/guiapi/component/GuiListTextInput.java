@@ -1,10 +1,10 @@
-package me.downn_falls.component;
+package me.downn_falls.guiapi.component;
 
 import de.tr7zw.nbtapi.NBTItem;
-import me.downn_falls.*;
-import me.downn_falls.api.Clickable;
-import me.downn_falls.api.InputResult;
-import me.downn_falls.utils.Utils;
+import me.downn_falls.guiapi.*;
+import me.downn_falls.guiapi.api.Clickable;
+import me.downn_falls.guiapi.api.InputResult;
+import me.downn_falls.guiapi.utils.GuiUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;
@@ -17,10 +17,10 @@ import java.util.function.Function;
 
 public class GuiListTextInput extends GuiButton implements Clickable {
     private final List<String> texts = new ArrayList<>();
-    private String editTitle = Utils.colorize("&eInput Text");
-    private String editSubTitle = Utils.colorize("&fInput the text in the chat message");
-    private String loreFormat = Utils.colorize("&f- {lore}");
-    private String invalidInputMessage = Utils.colorize("&cInvalid input format!");
+    private String editTitle = GuiUtils.colorize("&eInput Text");
+    private String editSubTitle = GuiUtils.colorize("&fInput the text in the chat message");
+    private String loreFormat = GuiUtils.colorize("&f- {lore}");
+    private String invalidInputMessage = GuiUtils.colorize("&cInvalid input format!");
     private Function<AsyncPlayerChatEvent, InputResult> whenInput;
 
     public GuiListTextInput(GUI gui, String id, int slot) {
@@ -40,7 +40,7 @@ public class GuiListTextInput extends GuiButton implements Clickable {
         this.editSubTitle = s;
     }
     public void setLoreFormat(String s) {
-        this.loreFormat = Utils.colorize(s);
+        this.loreFormat = GuiUtils.colorize(s);
     }
     public List<String> getTexts() {
         return texts;
@@ -50,7 +50,7 @@ public class GuiListTextInput extends GuiButton implements Clickable {
         this.whenInput = value;
     }
     public void addText(String s) {
-        texts.add(Utils.colorize(s));
+        texts.add(GuiUtils.colorize(s));
     }
 
     public void removeText(int index) {

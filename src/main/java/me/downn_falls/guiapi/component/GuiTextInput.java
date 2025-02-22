@@ -1,10 +1,10 @@
-package me.downn_falls.component;
+package me.downn_falls.guiapi.component;
 
 import de.tr7zw.nbtapi.NBTItem;
-import me.downn_falls.*;
-import me.downn_falls.api.Clickable;
-import me.downn_falls.api.InputResult;
-import me.downn_falls.utils.Utils;
+import me.downn_falls.guiapi.*;
+import me.downn_falls.guiapi.api.Clickable;
+import me.downn_falls.guiapi.api.InputResult;
+import me.downn_falls.guiapi.utils.GuiUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;
@@ -17,10 +17,10 @@ import java.util.function.Function;
 public class GuiTextInput extends GuiButton implements Clickable {
 
     private String text;
-    private String editTitle = Utils.colorize("&eInput Text");
-    private String editSubTitle = Utils.colorize("&fInput the text in the chat message");
+    private String editTitle = GuiUtils.colorize("&eInput Text");
+    private String editSubTitle = GuiUtils.colorize("&fInput the text in the chat message");
     private String defaultInput;
-    private String invalidInputMessage = Utils.colorize("&cInvalid input format!");
+    private String invalidInputMessage = GuiUtils.colorize("&cInvalid input format!");
     private Function<AsyncPlayerChatEvent, InputResult> whenInput = (e) -> InputResult.SUCCESS;
 
     public GuiTextInput(GUI gui, String id, int slot) {
@@ -73,7 +73,7 @@ public class GuiTextInput extends GuiButton implements Clickable {
     @Override
     public void render(GuiRenderer renderer) {
 
-        ItemStack item = ItemStackBuilder.replaceLore(enable ? displayItem : notEnableButton, "{text}", text == null ? defaultInput == null ? Utils.colorize("&cNone") : defaultInput : text);
+        ItemStack item = ItemStackBuilder.replaceLore(enable ? displayItem : notEnableButton, "{text}", text == null ? defaultInput == null ? GuiUtils.colorize("&cNone") : defaultInput : text);
 
         NBTItem nbt = new NBTItem(item);
         nbt.setString("component-id", getFullId());
@@ -91,7 +91,7 @@ public class GuiTextInput extends GuiButton implements Clickable {
                     player.closeInventory();
                     GuiListener.GUI_TEXT_INPUT.put(player, this);
 
-                    player.sendTitle(Utils.colorize(editTitle), Utils.colorize(editSubTitle), 10, 5 * 60 * 20, 20);
+                    player.sendTitle(GuiUtils.colorize(editTitle), GuiUtils.colorize(editSubTitle), 10, 5 * 60 * 20, 20);
                 }
             }
         }

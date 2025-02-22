@@ -1,6 +1,6 @@
-package me.downn_falls.deathInventory.manager;
+package me.downn_falls.deathInventory.cache;
 
-import me.downn_falls.deathInventory.DeathData;
+import me.downn_falls.deathInventory.manager.DeathData;
 import org.bukkit.entity.Player;
 
 import java.util.List;

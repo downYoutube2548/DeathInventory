@@ -1,4 +1,4 @@
-package me.downn_falls;
+package me.downn_falls.guiapi;
 
 import de.tr7zw.nbtapi.NBTItem;
 import org.bukkit.Material;

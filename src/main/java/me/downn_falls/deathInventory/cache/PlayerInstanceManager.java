@@ -1,4 +1,4 @@
-package me.downn_falls.deathInventory.manager;
+package me.downn_falls.deathInventory.cache;
 
 import me.downn_falls.deathInventory.player.DeathPlayer;
 import org.bukkit.entity.Player;

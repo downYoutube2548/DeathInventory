@@ -1,4 +1,4 @@
-package me.downn_falls.api;
+package me.downn_falls.guiapi.api;
 
 public class InputResult {
     public static InputResult SUCCESS = new InputResult(null, false);

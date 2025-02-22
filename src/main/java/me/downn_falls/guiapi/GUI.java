@@ -1,7 +1,7 @@
-package me.downn_falls;
+package me.downn_falls.guiapi;
 
-import me.downn_falls.component.GuiComponent;
-import me.downn_falls.utils.Utils;
+import me.downn_falls.guiapi.component.GuiComponent;
+import me.downn_falls.guiapi.utils.GuiUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
@@ -21,7 +21,7 @@ public class GUI {
     private final UUID inventoryUUID = UUID.randomUUID();
 
     public GUI(String title, int rows) {
-        this.title = Utils.colorize(title);
+        this.title = GuiUtils.colorize(title);
         this.size = 9 * rows;
     }
 

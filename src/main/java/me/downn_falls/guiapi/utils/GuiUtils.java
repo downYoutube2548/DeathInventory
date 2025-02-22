@@ -3,7 +3,7 @@ package me.downn_falls.guiapi.utils;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Utils {
+public class GuiUtils {
     public static String colorize(String s) {
         if (s == null || s.isEmpty())
             return "";

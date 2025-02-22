@@ -1,7 +1,7 @@
-package me.downn_falls;
+package me.downn_falls.guiapi;
 
 import de.tr7zw.nbtapi.NBTItem;
-import me.downn_falls.utils.Utils;
+import me.downn_falls.guiapi.utils.GuiUtils;
 import org.bukkit.Material;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.enchantments.Enchantment;
@@ -51,13 +51,13 @@ public class ItemStackBuilder {
     }
 
     public ItemStackBuilder setDisplayName(String s) {
-        this.displayName = Utils.colorize(s);
+        this.displayName = GuiUtils.colorize(s);
         return this;
     }
 
     public ItemStackBuilder addLore(String... l) {
         for (String s : l) {
-            this.itemLore.add(Utils.colorize(s));
+            this.itemLore.add(GuiUtils.colorize(s));
         }
         return this;
     }

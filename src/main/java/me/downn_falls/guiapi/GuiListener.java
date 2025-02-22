@@ -1,12 +1,13 @@
-package me.downn_falls;
+package me.downn_falls.guiapi;
 
 import de.tr7zw.nbtapi.NBTItem;
-import me.downn_falls.api.Clickable;
-import me.downn_falls.api.Editable;
-import me.downn_falls.component.GuiComponent;
-import me.downn_falls.component.GuiItemChooser;
-import me.downn_falls.component.GuiListTextInput;
-import me.downn_falls.component.GuiTextInput;
+import me.downn_falls.guiapi.GuiInventoryHolder;
+import me.downn_falls.guiapi.api.Clickable;
+import me.downn_falls.guiapi.api.Editable;
+import me.downn_falls.guiapi.component.GuiComponent;
+import me.downn_falls.guiapi.component.GuiItemChooser;
+import me.downn_falls.guiapi.component.GuiListTextInput;
+import me.downn_falls.guiapi.component.GuiTextInput;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

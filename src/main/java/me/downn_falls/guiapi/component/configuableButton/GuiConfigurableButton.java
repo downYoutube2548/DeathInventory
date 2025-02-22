@@ -1,10 +1,10 @@
-package me.downn_falls.component.configuableButton;
+package me.downn_falls.guiapi.component.configuableButton;
 
 import de.tr7zw.nbtapi.NBTItem;
-import me.downn_falls.GUI;
-import me.downn_falls.GuiRenderer;
-import me.downn_falls.ItemStackBuilder;
-import me.downn_falls.component.GuiButton;
+import me.downn_falls.guiapi.GUI;
+import me.downn_falls.guiapi.GuiRenderer;
+import me.downn_falls.guiapi.ItemStackBuilder;
+import me.downn_falls.guiapi.component.GuiButton;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;

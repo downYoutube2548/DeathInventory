@@ -1,4 +1,4 @@
-package me.downn_falls;
+package me.downn_falls.guiapi;
 
 public class GuiUtils {
     public static int getRow(int slot, int maxColumn) {

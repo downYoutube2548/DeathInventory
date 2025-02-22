@@ -1,4 +1,4 @@
-package me.downn_falls.component.configuableButton;
+package me.downn_falls.guiapi.component.configuableButton;
 
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;

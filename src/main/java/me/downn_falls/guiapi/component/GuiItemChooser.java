@@ -1,12 +1,12 @@
-package me.downn_falls.component;
+package me.downn_falls.guiapi.component;
 
 import de.tr7zw.nbtapi.NBTItem;
-import me.downn_falls.GUI;
-import me.downn_falls.GuiListener;
-import me.downn_falls.GuiRenderer;
-import me.downn_falls.ItemStackBuilder;
-import me.downn_falls.api.Clickable;
-import me.downn_falls.utils.Utils;
+import me.downn_falls.guiapi.GUI;
+import me.downn_falls.guiapi.GuiListener;
+import me.downn_falls.guiapi.GuiRenderer;
+import me.downn_falls.guiapi.ItemStackBuilder;
+import me.downn_falls.guiapi.api.Clickable;
+import me.downn_falls.guiapi.utils.GuiUtils;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.event.inventory.InventoryClickEvent;
@@ -16,8 +16,8 @@ public class GuiItemChooser extends GuiButton implements Clickable {
 
     private ItemStack chooseItem;
     private ItemStack displayItem = new ItemStackBuilder().build();
-    private String chooseTitle = Utils.colorize("&bChoose Item");
-    private String chooseSubTitle = Utils.colorize("&fClick any item to choose");
+    private String chooseTitle = GuiUtils.colorize("&bChoose Item");
+    private String chooseSubTitle = GuiUtils.colorize("&fClick any item to choose");
     public GuiItemChooser(GUI gui, String id, int slot) {
         super(gui, id, slot);
     }
@@ -42,11 +42,11 @@ public class GuiItemChooser extends GuiButton implements Clickable {
     }
 
     public GuiItemChooser setChooseTitle(String s) {
-        this.chooseTitle = Utils.colorize(s);
+        this.chooseTitle = GuiUtils.colorize(s);
         return this;
     }
     public GuiItemChooser setChooseSubTitle(String s) {
-        this.chooseSubTitle = Utils.colorize(s);
+        this.chooseSubTitle = GuiUtils.colorize(s);
         return this;
     }
 

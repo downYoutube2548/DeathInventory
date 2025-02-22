@@ -1,4 +1,4 @@
-package me.downn_falls;
+package me.downn_falls.guiapi;
 
 @FunctionalInterface
 public interface TriConsumer<T, U, V> {
